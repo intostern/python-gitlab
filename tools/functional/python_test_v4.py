@@ -258,6 +258,8 @@ p_id = gl.groups.list(search="group2")[0].id
 group3 = gl.groups.create({"name": "group3", "path": "group3", "parent_id": p_id})
 group4 = gl.groups.create({"name": "group4", "path": "group4"})
 
+time.sleep(5)
+
 assert len(gl.groups.list()) == 4
 assert len(gl.groups.list(search="oup1")) == 1
 assert group3.parent_id == p_id
